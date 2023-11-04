@@ -1,0 +1,547 @@
+> productid<-100
+Warning message:
+R graphics engine version 16 is not supported by this version of RStudio. The Plots tab will be disabled until a newer version of RStudio is installed. 
+> productid
+[1] 100
+> productname<-"apple"
+> productname
+[1] "apple"
+> 
+> class(productid)
+[1] "numeric"
+> class(productname)
+[1] "character"
+> f1<-FALSE
+> f1
+[1] FALSE
+> p1<-12.5
+> p1
+[1] 12.5
+> p2<-12L
+> p2
+[1] 12
+> class(p2)
+[1] "integer"
+> class(p1)
+[1] "numeric"
+> p3<-1i
+> p3
+[1] 0+1i
+> class(p3)
+[1] "complex"
+> x<-10L
+> y<-12
+> s1<-as.numeric(x)
+> s1
+[1] 10
+> class(s1)
+[1] "numeric"
+> s2<-as.integer(y)
+> s2
+[1] 12
+> class(s2)
+[1] "integer"
+> 10+20
+[1] 30
+> 2*2
+[1] 4
+> max(10,20,60)
+[1] 60
+> min(30,10,45)
+[1] 10
+> sqrt(2)
+[1] 1.414214
+> abs(-3.8)
+[1] 3.8
+> hello
+Error: object 'hello' not found
+> "welcome"
+[1] "welcome"
+> str<-"welcome"
+> str
+[1] "welcome"
+> class(str)
+[1] "character"
+> str1<-"hai"
+> str1+str
+Error in str1 + str : non-numeric argument to binary operator
+> str1
+[1] "hai"
+> nchar(str1)
+[1] 3
+> str
+[1] "welcome"
+> str1
+[1] "hai"
+> 
+> paste(str1,str)
+[1] "hai welcome"
+> str3<-"hello welcome"
+> grepl("h",str)
+[1] FALSE
+> grepl("hello",str)
+[1] FALSE
+> grepl("hello welcome",str)
+[1] FALSE
+> grepl("hello welcome",str3)
+[1] TRUE
+> grepl("h",str3)
+[1] TRUE
+> 10>9
+[1] TRUE
+> 9>10
+[1] FALSE
+> 10==10
+[1] TRUE
+> a1<-10
+> a2<-20
+> a1>a2
+[1] FALSE
+> numeric(20)
+ [1] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+> c(10,20,30,40)
+[1] 10 20 30 40
+> c(10,"azar","mohamed",2.5)
+[1] "10"      "azar"    "mohamed" "2.5"    
+> s1<-10
+> s1
+[1] 10
+> class(c)
+[1] "function"
+> c(1,2,c(3,4,5))
+[1] 1 2 3 4 5
+> 1:4
+[1] 1 2 3 4
+> seq(1,10,1)
+ [1]  1  2  3  4  5  6  7  8  9 10
+> seq(1,20,2)
+ [1]  1  3  5  7  9 11 13 15 17 19
+> class(seq)
+[1] "function"
+> c("hello welcome")
+[1] "hello welcome"
+> v1<-c(10,20,30,40)
+> v1
+[1] 10 20 30 40
+> class(v1)
+[1] "numeric"
+> v1[1]
+[1] 10
+> v1[1:3]
+[1] 10 20 30
+> x<-c(a=10,b=20,c=30)
+> x
+ a  b  c 
+10 20 30 
+> x[c("a","c")]
+ a  c 
+10 30 
+> seq(3,length.out = 10)
+ [1]  3  4  5  6  7  8  9 10 11 12
+> cat("welcome")
+welcome
+> matrix(1,2,3,2,3,4,3,4,5,ncol=3)
+Error in matrix(1, 2, 3, 2, 3, 4, 3, 4, 5, ncol = 3) : 
+  unused arguments (3, 4, 3, 4, 5)
+> matrix(1,2,3,2,3,4,3,4,5),ncol=3)
+Error: unexpected ',' in "matrix(1,2,3,2,3,4,3,4,5),"
+> matrix(c(1,2,3,2,3,4,3,4,5),ncol=3)
+     [,1] [,2] [,3]
+[1,]    1    2    3
+[2,]    2    3    4
+[3,]    3    4    5
+> matrix(c(1,2,3,4,5,6,7,8,9),nrow=3,byrow=TRUE)
+     [,1] [,2] [,3]
+[1,]    1    2    3
+[2,]    4    5    6
+[3,]    7    8    9
+> matrix(c(1,2,3,4,5,6,7,8,9),nrow=3,byrow=TRUE,
++ dimnames=list(c("r1","r2","r3"),c("c1","c2","C3")))
+   c1 c2 C3
+r1  1  2  3
+r2  4  5  6
+r3  7  8  9
+
+> m1<-matrix(c(1,2,3,4,5,6,7,8,9), ncol =3)
+> row.names(m1)<-c("r1","r2","r3")
+> colnames(m1)<-c("c1","c2","c3")
+> m1
+   c1 c2 c3
+r1  1  4  7
+r2  2  5  8
+r3  3  6  9
+> m1
+   c1 c2 c3
+r1  1  4  7
+r2  2  5  8
+r3  3  6  9
+> 
+> 
+> m1[1,2]
+[1] 4
+> m1[1:2,2:3]
+   c2 c3
+r1  4  7
+r2  5  8
+> m1+m1
+   c1 c2 c3
+r1  2  8 14
+r2  4 10 16
+r3  6 12 18
+> m1*m2
+Error: object 'm2' not found
+> m1*m1
+   c1 c2 c3
+r1  1 16 49
+r2  4 25 64
+r3  9 36 81
+> m1^2
+   c1 c2 c3
+r1  1 16 49
+r2  4 25 64
+r3  9 36 81
+> 
+> x<-array(c(1,2,3,4,5,6,7,10,dim=c(1,2)))
+> x
+ [1]  1  2  3  4  5  6  7 10  1  2
+> t1<-c(1:20)
+> t1
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+> m1<-array(t1,dim=c(4,3,2))
+> m1
+, , 1
+
+     [,1] [,2] [,3]
+[1,]    1    5    9
+[2,]    2    6   10
+[3,]    3    7   11
+[4,]    4    8   12
+
+, , 2
+
+     [,1] [,2] [,3]
+[1,]   13   17    1
+[2,]   14   18    2
+[3,]   15   19    3
+[4,]   16   20    4
+
+> m1<-array(t1,dim=c(4,3,3))
+> m1
+, , 1
+
+     [,1] [,2] [,3]
+[1,]    1    5    9
+[2,]    2    6   10
+[3,]    3    7   11
+[4,]    4    8   12
+
+, , 2
+
+     [,1] [,2] [,3]
+[1,]   13   17    1
+[2,]   14   18    2
+[3,]   15   19    3
+[4,]   16   20    4
+
+, , 3
+
+     [,1] [,2] [,3]
+[1,]    5    9   13
+[2,]    6   10   14
+[3,]    7   11   15
+[4,]    8   12   16
+
+> x<-array(c(1,2,3,4,5,6,7,10),dim=c(1,2))
+> x
+     [,1] [,2]
+[1,]    1    2
+> x<-array(c(1,2,3,4,5,6,7,10),dim=c(1,2,1))
+> x
+, , 1
+
+     [,1] [,2]
+[1,]    1    2
+
+> m1
+, , 1
+
+     [,1] [,2] [,3]
+[1,]    1    5    9
+[2,]    2    6   10
+[3,]    3    7   11
+[4,]    4    8   12
+
+, , 2
+
+     [,1] [,2] [,3]
+[1,]   13   17    1
+[2,]   14   18    2
+[3,]   15   19    3
+[4,]   16   20    4
+
+, , 3
+
+     [,1] [,2] [,3]
+[1,]    5    9   13
+[2,]    6   10   14
+[3,]    7   11   15
+[4,]    8   12   16
+
+> length(t1)
+[1] 20
+> dim(m1)
+[1] 4 3 3
+> t1<-list("mca","mba","cse","ai")
+> t1
+[[1]]
+[1] "mca"
+
+[[2]]
+[1] "mba"
+
+[[3]]
+[1] "cse"
+
+[[4]]
+[1] "ai"
+
+> t1[1]
+[[1]]
+[1] "mca"
+
+> t1[1]<-"btech"
+> t1
+[[1]]
+[1] "btech"
+
+[[2]]
+[1] "mba"
+
+[[3]]
+[1] "cse"
+
+[[4]]
+[1] "ai"
+
+> length(t1)
+[1] 4
+> append(t1,"ece")
+[[1]]
+[1] "btech"
+
+[[2]]
+[1] "mba"
+
+[[3]]
+[1] "cse"
+
+[[4]]
+[1] "ai"
+
+[[5]]
+[1] "ece"
+
+> append(t1,"eee",1)
+[[1]]
+[1] "btech"
+
+[[2]]
+[1] "eee"
+
+[[3]]
+[1] "mba"
+
+[[4]]
+[1] "cse"
+
+[[5]]
+[1] "ai"
+
+> t1[1:3]
+[[1]]
+[1] "btech"
+
+[[2]]
+[1] "mba"
+
+[[3]]
+[1] "cse"
+
+> t1
+[[1]]
+[1] "btech"
+
+[[2]]
+[1] "mba"
+
+[[3]]
+[1] "cse"
+
+[[4]]
+[1] "ai"
+
+> t2<-(10,20,30)
+Error: unexpected ',' in "t2<-(10,"
+> t2<-c(10,20,30)
+> t2
+[1] 10 20 30
+> t2<-list(10,20,30)
+> t2
+[[1]]
+[1] 10
+
+[[2]]
+[1] 20
+
+[[3]]
+[1] 30
+
+> t3<-c(t1,t2)
+> t3
+[[1]]
+[1] "btech"
+
+[[2]]
+[1] "mba"
+
+[[3]]
+[1] "cse"
+
+[[4]]
+[1] "ai"
+
+[[5]]
+[1] 10
+
+[[6]]
+[1] 20
+
+[[7]]
+[1] 30
+
+> l1<-list(x=1,y=c(TRUE,FALSE),z=c("a","b",c))
+> l1
+$x
+[1] 1
+
+$y
+[1]  TRUE FALSE
+
+$z
+$z[[1]]
+[1] "a"
+
+$z[[2]]
+[1] "b"
+
+$z[[3]]
+function (...)  .Primitive("c")
+
+
+> $z
+Error: unexpected '$' in "$"
+> l1<-list(x=1,y=c(TRUE,FALSE),z=c("a","b","c"))
+> l1
+$x
+[1] 1
+
+$y
+[1]  TRUE FALSE
+
+$z
+[1] "a" "b" "c"
+
+> l3<-as.list(c(a=1,b=2,c=3))
+> l3
+$a
+[1] 1
+
+$b
+[1] 2
+
+$c
+[1] 3
+
+> l4<-list(a=1,b=2,c=3)
+> l4
+$a
+[1] 1
+
+$b
+[1] 2
+
+$c
+[1] 3
+
+> unlist(l4)
+a b c 
+1 2 3 
+> persons<-data.frame(Name=c("azar","mohamed","mohan"),Gender=c("Male","Male","Male"))
+> persons<-data.frame(Name=c("azar","mohamed","mohan"),Gender=c("Male","Male","Male"),Age=c(24,25,26),Major=c("Teacher","Trainer","SrTrainer"))
+
+> persons<-data.frame(Name=c("azar","mohamed","mohan"),Gender=c("Male","Male","Male"),Age=c(24,25,26),Major=c("Teacher","Trainer","SrTrainer"))
+> persons
+     Name Gender Age     Major
+1    azar   Male  24   Teacher
+2 mohamed   Male  25   Trainer
+3   mohan   Male  26 SrTrainer
+> l1<-list(X=c(1,2,3),y=c("a","b","c"))
+> data.frame(l1)
+  X y
+1 1 a
+2 2 b
+3 3 c
+> as.data.frame(l1)
+  X y
+1 1 a
+2 2 b
+3 3 c
+> m1<-matrix(c(1,2,3,4,5,6,7,8,9),nrow=3,byrow = FALSE)
+> 
+> m1
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+> 
+> data.frame(m1)
+  X1 X2 X3
+1  1  4  7
+2  2  5  8
+3  3  6  9
+> as.data.frame(m1)
+  V1 V2 V3
+1  1  4  7
+2  2  5  8
+3  3  6  9
+> persons
+     Name Gender Age     Major
+1    azar   Male  24   Teacher
+2 mohamed   Male  25   Trainer
+3   mohan   Male  26 SrTrainer
+> persons$Name
+[1] "azar"    "mohamed" "mohan"  
+> persons$Age
+[1] 24 25 26
+> persons[1]
+     Name
+1    azar
+2 mohamed
+3   mohan
+> persons[1:2]
+     Name Gender
+1    azar   Male
+2 mohamed   Male
+3   mohan   Male
+> persons["Name"]
+     Name
+1    azar
+2 mohamed
+3   mohan
+> persons[c("Name","Age")]
+     Name Age
+1    azar  24
+2 mohamed  25
+3   mohan  26
+> 
+> 
